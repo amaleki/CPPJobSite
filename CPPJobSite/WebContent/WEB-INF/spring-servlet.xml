@@ -39,5 +39,7 @@
 	</bean>
 	
 	<bean id="accountService" class="com.calpoly.service.AccountService"/>
+    
+    <bean id="jobService" class="com.calpoly.service.JobService"/>
         
 </beans>
