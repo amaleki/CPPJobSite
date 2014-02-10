@@ -20,6 +20,12 @@ public class JdbcAccountDAO implements AccountDAO {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 	
+	// NEW METHOD
+	public void delete(String email){
+		this.jdbcTemplate.update("delete from account");
+				
+	}
+	
 	public void insert(Account account){
 		
 		this.jdbcTemplate.update("insert into account (userid, firstname, lastname, email, phone, type, password) values (?,?,?,?,?,?,?)",

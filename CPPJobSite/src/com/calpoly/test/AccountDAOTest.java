@@ -38,6 +38,21 @@ public class AccountDAOTest {
 		assertNotNull(accounts);
 		
 	}
+	
+	@Test
+	public void insertAndDelete(){
+		
+		Account account = new Account(0,"arian", "maleki","ahmaleki@gmail.com","714-555-1212","student", "password");
+		
+		accountDAO.insert(account);	
+		
+		accountDAO.delete("ahmaleki@gmail.com");
+		
+		Account acct = accountDAO.findByEmail("ahmaleki@gmail.com");
+		
+		System.out.println(acct.toString());
+		
+	}
 
 	public void setAccountDAO(JdbcAccountDAO accountDAO) {
 		this.accountDAO = accountDAO;

@@ -9,6 +9,7 @@ public class Account {
 	private String phone;
 	private String accountType;
 	private String password;
+	private String favoriteIcecream;
 	
 	public Account(){
 		
